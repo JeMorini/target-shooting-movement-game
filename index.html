@@ -28,27 +28,28 @@
 
       html,
       body {
-        width: 100%;
         height: 100%;
-        overflow: hidden;
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        color: #333333;
-      }
-
-      body {
         margin: 0;
         padding: 0;
       }
 
+      .background-image {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://i0.wp.com/multarte.com.br/wp-content/uploads/2019/01/ceu-azul-nuvens17.jpg?fit=2560%2C1440&ssl=1");
+        background-size: cover;
+        background-position: center;
+      }
+
       .container {
         margin: 20px auto;
-        display: flex;
+        display: none;
       }
 
       .video,
       .debug {
         padding: 0 20px;
+        display: none;
       }
 
       table.summary {
@@ -93,7 +94,7 @@
   </head>
 
   <body>
-    <div class="container" style="display: none">
+    <div class="container">
       <div class="video">
         <div id="video-container">
           <video id="pose-video" class="layer" playsinline></video>
@@ -104,7 +105,7 @@
         </div>
       </div>
 
-      <div class="debug" style="display: none">
+      <div class="debug">
         <h2>Left Hand</h2>
         <table id="summary-left" class="summary">
           <thead>
@@ -203,23 +204,6 @@
         style="z-index: 9"
       />
     </div>
-
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .background-image {
-        width: 100%;
-        height: 100%;
-        background-image: url("https://i0.wp.com/multarte.com.br/wp-content/uploads/2019/01/ceu-azul-nuvens17.jpg?fit=2560%2C1440&ssl=1");
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
 
     <script src="./src/index.js" type="module"></script>
   </body>
